@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jadwal KRL Jogja–Solo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Jadwal KRL Jogja–Solo</h1>
+      <p class="sub">Cek kereta berikutnya, estimasi tiba, dan lama perjalanan antar stasiun.</p>
+    </header>
+
+    <div class="tabs">
+      <div class="tab active" data-dir="jogjaSolo">Yogyakarta → Solo</div>
+      <div class="tab" data-dir="soloJogja">Solo → Yogyakarta</div>
+    </div>
+
+    <div class="controls">
+      <div class="field">
+        <label for="origin">Naik dari</label>
+        <select id="origin"></select>
+      </div>
+      <div class="swap" id="swap" title="Tukar arah">⇄</div>
+      <div class="field">
+        <label for="dest">Turun di</label>
+        <select id="dest"></select>
+      </div>
+    </div>
+    <p class="clock-note" id="clockNote"></p>
+
+    <div id="next-card"></div>
+
+    <p class="list-title">Semua jadwal hari ini</p>
+    <div class="trains" id="trainList"></div>
+
+    <footer>Waktu mengikuti jam WIB perangkat Anda. Jadwal dapat berubah sewaktu-waktu, cek ulang di loket/aplikasi KAI
+      Access sebelum berangkat.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
